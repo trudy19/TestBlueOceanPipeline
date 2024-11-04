@@ -25,6 +25,7 @@ pipeline {
     }
 
     stage('deploy') {
+      agent any
       steps {
         input(message: 'are you sure to deploy', ok: 'YES ,I\'am sure')
         echo 'deployment completed '
